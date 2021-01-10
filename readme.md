@@ -38,7 +38,7 @@ Contributions are welcomed! Check out our [Contribution Guidelines](contributing
 
 - **Tell me you like this project or how it helped you out!**
 
-  - [Comment in the project's guestbook](https://github.com/markcnunes/street-photography-hashtags/issues/[id]) 😊
+  - [Comment in the project's guestbook](https://github.com/markcnunes/street-photography-hashtags/issues/1) 😊
   - Reach out on [Instagram](https://www.instagram.com/markcnunes/) 📸
 
 Thanks for your interest in this project :heart:
