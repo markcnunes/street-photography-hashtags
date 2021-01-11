@@ -77,7 +77,7 @@ export const Home = () => {
   return (
     <StyledHome>
       <StyledSubheader>
-        <h1>Street Photography Hahstags</h1>
+        <h1>Street Photography Hashtags</h1>
         <h2>A curation of hashtags for street photography on Instagram.</h2>
       </StyledSubheader>
       <main>
