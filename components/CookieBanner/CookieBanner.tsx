@@ -1,8 +1,8 @@
-import styled from '@emotion/styled';
-import Link from 'next/link';
-import React from 'react';
-import CookieConsent from 'react-cookie-consent';
-import initializeCookies, { cookieConsent } from 'helpers/handleCookies';
+import styled from '@emotion/styled'
+import Link from 'next/link'
+import React from 'react'
+import CookieConsent from 'react-cookie-consent'
+import initializeCookies, { cookieConsent } from 'helpers/handleCookies'
 
 const StyledCookieBanner = styled.div(({ theme }) => ({
   '.cookie': {
@@ -17,7 +17,7 @@ const StyledCookieBanner = styled.div(({ theme }) => ({
     background: theme.colors.white,
     color: theme.colors.black,
     padding: '1.2rem 1.6rem',
-    fontSize: theme.fontSizes[1],
+    fontSize: theme.fontSizes[1]
   },
 
   '.cookie__message': {
@@ -25,8 +25,8 @@ const StyledCookieBanner = styled.div(({ theme }) => ({
     textAlign: 'center',
     margin: '0 0 1.6rem 0',
     a: {
-      color: theme.colors.black,
-    },
+      color: theme.colors.black
+    }
   },
 
   button: {
@@ -44,14 +44,14 @@ const StyledCookieBanner = styled.div(({ theme }) => ({
       color: theme.colors.black,
       background: theme.colors.white,
       border: '1px solid ' + theme.colors.black,
-      marginRight: '1.6rem',
+      marginRight: '1.6rem'
     },
 
     '&#rcc-confirm-button': {
       color: theme.colors.white,
       background: theme.colors.primary,
-      marginRight: '1.6rem',
-    },
+      marginRight: '1.6rem'
+    }
   },
 
   '@media (min-width: 30rem)': {
@@ -59,31 +59,31 @@ const StyledCookieBanner = styled.div(({ theme }) => ({
       width: 'auto',
       flex: '1 0 0',
       textAlign: 'left',
-      margin: '0 1.6rem 0 0',
-    },
+      margin: '0 1.6rem 0 0'
+    }
   },
   '@media (min-width: 50rem)': {
     '.cookie': {
       top: 'inherit',
-      bottom: '0 !important',
-    },
+      bottom: '0 !important'
+    }
   },
   '@media (min-width: 70rem)': {
     '.cookie__message': {
       textAlign: 'center',
-      flex: 'inherit',
-    },
-  },
-}));
+      flex: 'inherit'
+    }
+  }
+}))
 
 const CookieBanner = () => {
   return (
     <StyledCookieBanner>
       <CookieConsent
-        buttonText='Ok'
+        buttonText="Ok"
         expires={150}
         onAccept={() => {
-          initializeCookies();
+          initializeCookies()
         }}
         enableDeclineButton
         /*
@@ -95,15 +95,15 @@ const CookieBanner = () => {
         cookieName={cookieConsent}
         cookieValue={'true'}
         disableStyles={true}
-        containerClasses='cookie'
-        contentClasses='cookie__message'
+        containerClasses="cookie"
+        contentClasses="cookie__message"
       >
         This website uses cookies to analyze web traffic. To find out more, read
         our <Link href={`/privacy`}>privacy</Link> and{' '}
         <Link href={`/terms`}>terms of use</Link>.
       </CookieConsent>
     </StyledCookieBanner>
-  );
-};
+  )
+}
 
-export default CookieBanner;
+export default CookieBanner

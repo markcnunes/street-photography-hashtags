@@ -1,11 +1,11 @@
-import React from 'react';
-import { render } from 'test/setupTests';
+import React from 'react'
+import { render } from 'test/setupTests'
 
-import Footer from '../Footer';
+import Footer from '../Footer'
 
 describe('<Footer />', () => {
   it('matches snapshot', () => {
-    const { asFragment } = render(<Footer />);
-    expect(asFragment()).toMatchSnapshot();
-  });
-});
+    const { asFragment } = render(<Footer />)
+    expect(asFragment()).toMatchSnapshot()
+  })
+})

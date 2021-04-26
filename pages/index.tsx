@@ -1,12 +1,12 @@
-import Head from 'next/head';
-import styled from '@emotion/styled';
-import LinkCTA from 'components/LinkCTA';
-import { GetStaticProps } from 'next';
-import generateAllData from 'helpers/generateAllData';
-import categories from 'data/categories';
-import locations from 'data/locations';
+import Head from 'next/head'
+import styled from '@emotion/styled'
+import LinkCTA from 'components/LinkCTA'
+import { GetStaticProps } from 'next'
+import generateAllData from 'helpers/generateAllData'
+import categories from 'data/categories'
+import locations from 'data/locations'
 
-const StyledHome = styled('div')((props) => ({
+const StyledHome = styled('div')(props => ({
   display: 'flex',
   flexDirection: 'column',
   flex: '1 0 0',
@@ -21,18 +21,18 @@ const StyledHome = styled('div')((props) => ({
       flexWrap: 'wrap',
       maxWidth: 1200,
       margin: '0 auto',
-      padding: '10px 20px',
-    },
+      padding: '10px 20px'
+    }
   },
   '@media (min-width: 780px)': {
     main: {
       '& > div': {
         justifyContent: 'center',
-        padding: '50px 20px',
-      },
-    },
-  },
-}));
+        padding: '50px 20px'
+      }
+    }
+  }
+}))
 
 const StyledSubheader = styled('div')({
   width: '100%',
@@ -40,13 +40,13 @@ const StyledSubheader = styled('div')({
   textAlign: 'center',
   '@media (max-width: 780px)': {
     h1: {
-      fontSize: 20,
+      fontSize: 20
     },
     h2: {
-      fontSize: 14,
-    },
-  },
-});
+      fontSize: 14
+    }
+  }
+})
 
 const StyledLocations = styled('div')({
   display: 'flex',
@@ -54,27 +54,27 @@ const StyledLocations = styled('div')({
   width: '100%',
   '& > h3': {
     textAlign: 'center',
-    width: '100%',
+    width: '100%'
   },
   '& > div': {
     display: 'flex',
     justifyContent: 'center',
     flexWrap: 'wrap',
-    width: '100%',
+    width: '100%'
   },
   a: {
     height: 'auto',
-    padding: '15px 30px',
-  },
-});
+    padding: '15px 30px'
+  }
+})
 
 export default function Home({ categories, locations }) {
-  const { category: allCategory, icon: allIcon } = generateAllData(categories);
+  const { category: allCategory, icon: allIcon } = generateAllData(categories)
   return (
     <>
       <Head>
         <title>Street Photography Hashtags</title>
-        <link rel='icon' href='/favicon.ico' />
+        <link rel="icon" href="/favicon.ico" />
       </Head>
       <StyledHome>
         <StyledSubheader>
@@ -84,7 +84,7 @@ export default function Home({ categories, locations }) {
         <main>
           <div>
             <LinkCTA category={allCategory} icon={allIcon} key={allCategory} />
-            {categories.map((item) => (
+            {categories.map(item => (
               <LinkCTA
                 category={item.category}
                 icon={item.icon}
@@ -95,7 +95,7 @@ export default function Home({ categories, locations }) {
           <StyledLocations>
             <h3>Locations</h3>
             <div>
-              {locations.map((item) => (
+              {locations.map(item => (
                 <LinkCTA category={item.category} key={item.category} />
               ))}
             </div>
@@ -103,7 +103,7 @@ export default function Home({ categories, locations }) {
         </main>
       </StyledHome>
     </>
-  );
+  )
 }
 
 export const getStaticProps: GetStaticProps = async () => {
@@ -111,7 +111,7 @@ export const getStaticProps: GetStaticProps = async () => {
   return {
     props: {
       categories,
-      locations,
-    },
-  };
-};
+      locations
+    }
+  }
+}

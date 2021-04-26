@@ -1,9 +1,9 @@
-import { RouterContext } from 'next/dist/next-server/lib/router-context';
-import { NextRouter } from 'next/router';
-import { ReactNode } from 'react';
+import { RouterContext } from 'next/dist/next-server/lib/router-context'
+import { NextRouter } from 'next/router'
+import { ReactNode } from 'react'
 
 interface MockNextRouterProps extends Partial<NextRouter> {
-  children?: ReactNode;
+  children?: ReactNode
 }
 
 /**
@@ -32,18 +32,18 @@ const MockNextRouter = ({ children, ...props }: MockNextRouterProps) => {
     events: {
       on: jest.fn(),
       off: jest.fn(),
-      emit: jest.fn(),
+      emit: jest.fn()
     },
     isFallback: false,
     isReady: true,
-    isPreview: false,
-  };
+    isPreview: false
+  }
 
   return (
     <RouterContext.Provider value={{ ...mockRouter, ...props }}>
       {children}
     </RouterContext.Provider>
-  );
-};
+  )
+}
 
-export default MockNextRouter;
+export default MockNextRouter

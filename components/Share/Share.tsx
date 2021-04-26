@@ -1,8 +1,8 @@
-import styled from '@emotion/styled';
-import { rgba } from 'polished';
-import ShareButtons from './ShareButtons';
+import styled from '@emotion/styled'
+import { rgba } from 'polished'
+import ShareButtons from './ShareButtons'
 
-const StyledShare = styled('div')((props) => ({
+const StyledShare = styled('div')(props => ({
   display: 'flex',
   justifyContent: 'center',
   alignItems: 'center',
@@ -20,15 +20,15 @@ const StyledShare = styled('div')((props) => ({
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
-    flexWrap: 'wrap',
+    flexWrap: 'wrap'
   },
   '.share-buttons__item': {
     svg: {
       borderRadius: '50%',
       '&:hover': {
-        background: props.theme.colors.primary,
-      },
-    },
+        background: props.theme.colors.primary
+      }
+    }
   },
   '.share-buttons__clipboard': {
     display: 'flex',
@@ -40,8 +40,8 @@ const StyledShare = styled('div')((props) => ({
     padding: 0,
     '&:hover': {
       color: props.theme.colors.white,
-      background: props.theme.colors.primary,
-    },
+      background: props.theme.colors.primary
+    }
   },
   '@media (min-width: 780px)': {
     width: 'auto',
@@ -51,20 +51,20 @@ const StyledShare = styled('div')((props) => ({
     transform: 'translateY(-50%)',
     borderRadius: '10px 0 0 10px',
     h4: {
-      display: 'none',
+      display: 'none'
     },
     '.share-buttons': {
       flexDirection: 'column',
       'button + button': {
-        marginTop: 10,
-      },
-    },
+        marginTop: 10
+      }
+    }
   },
   '@media (min-width: 1280px)': {
     right: 20,
-    borderRadius: 10,
-  },
-}));
+    borderRadius: 10
+  }
+}))
 
 const Share: React.FC = () => {
   return (
@@ -72,7 +72,7 @@ const Share: React.FC = () => {
       <h4>Share this page</h4>
       <ShareButtons />
     </StyledShare>
-  );
-};
+  )
+}
 
-export default Share;
+export default Share

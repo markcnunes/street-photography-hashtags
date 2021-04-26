@@ -1,1 +1,1 @@
-export { default } from './VerifyKeyword';
+export { default } from './VerifyKeyword'

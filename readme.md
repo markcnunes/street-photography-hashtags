@@ -4,7 +4,7 @@
         <img width="300" height="150" src="./media/logo-white-bg.svg" alt="Street Photography Hashtags">
     </a>
 	<br/>
-	<a href="https://markclausnunes.com/markcnunes.github.io/street-photography-hashtags">
+	<a href="https://street-photography-hashtags.vercel.app/">
         View website
     </a>
 	<br/>

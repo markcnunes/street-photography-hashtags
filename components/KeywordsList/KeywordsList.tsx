@@ -1,23 +1,23 @@
-import styled from '@emotion/styled';
-import Button from 'components/Button';
-import React from 'react';
-import { FiClipboard } from 'react-icons/fi';
-import { toast } from 'react-toastify';
-import { Category } from 'data/types';
+import styled from '@emotion/styled'
+import Button from 'components/Button'
+import React from 'react'
+import { FiClipboard } from 'react-icons/fi'
+import { toast } from 'react-toastify'
+import { Category } from 'data/types'
 
 interface KeywordsListProps extends Pick<Category, 'keywords'> {
   /**
    * If `true`, it will display the icon to copy the items.
    */
-  copy?: boolean;
+  copy?: boolean
   /**
    * If `true`, it will display the length of items.
    */
-  counter?: boolean;
+  counter?: boolean
   /**
    * Allows more props. corresponds to ...other
    */
-  [propName: string]: any;
+  [propName: string]: any
 }
 
 const KeywordsList = ({
@@ -26,20 +26,20 @@ const KeywordsList = ({
   counter = true,
   ...other
 }: KeywordsListProps) => {
-  const keywordsList = keywords.map((item) => (
+  const keywordsList = keywords.map(item => (
     <a
       href={`https://www.instagram.com/explore/tags/${item.split('#')[1]}/`}
       title={`View ${item.split('#')[1]} on Instagram`}
-      target='_blank'
-      rel='noopener noreferrer'
+      target="_blank"
+      rel="noopener noreferrer"
       key={item}
     >
       {item}
     </a>
-  ));
+  ))
 
   const copyToClipboard = () => {
-    navigator.clipboard.writeText(keywords.join(' '));
+    navigator.clipboard.writeText(keywords.join(' '))
     toast('✔️ Copied to Clipboard', {
       position: 'top-right',
       autoClose: 5000,
@@ -47,9 +47,9 @@ const KeywordsList = ({
       closeOnClick: true,
       pauseOnHover: true,
       draggable: true,
-      progress: undefined,
-    });
-  };
+      progress: undefined
+    })
+  }
   return (
     <StyledKeywordsList {...other}>
       <StyledItems>{keywordsList}</StyledItems>
@@ -58,10 +58,10 @@ const KeywordsList = ({
           {counter && <StyledCounter>{keywords.length}</StyledCounter>}
           {copy && (
             <StyledCopy
-              color='black'
-              variant='outlined'
-              icon='only'
-              title='Copy all to clipboard'
+              color="black"
+              variant="outlined"
+              icon="only"
+              title="Copy all to clipboard"
               onClick={copyToClipboard}
             >
               <FiClipboard />
@@ -70,10 +70,10 @@ const KeywordsList = ({
         </StyledSidebar>
       )}
     </StyledKeywordsList>
-  );
-};
+  )
+}
 
-export default KeywordsList;
+export default KeywordsList
 
 const StyledKeywordsList = styled('div')(({ theme }) => ({
   position: 'relative',
@@ -84,9 +84,9 @@ const StyledKeywordsList = styled('div')(({ theme }) => ({
   width: '100%',
   padding: 20,
   '@media (min-width: 1024px)': {
-    padding: '40px 30px',
-  },
-}));
+    padding: '40px 30px'
+  }
+}))
 
 const StyledItems = styled('div')(({ theme }) => ({
   display: 'flex',
@@ -102,23 +102,23 @@ const StyledItems = styled('div')(({ theme }) => ({
     borderRadius: 5,
     border: `1px solid transparent`,
     '&:hover': {
-      borderColor: theme.colors.muted,
-    },
+      borderColor: theme.colors.muted
+    }
   },
   '&:hover': {
     a: {
       color: theme.colors.muted,
 
       '&:hover': {
-        color: theme.colors.black,
-      },
-    },
+        color: theme.colors.black
+      }
+    }
   },
 
   '@media (max-width: 420px)': {
-    fontSize: 12,
-  },
-}));
+    fontSize: 12
+  }
+}))
 
 const StyledSidebar = styled('div')({
   position: 'absolute',
@@ -127,9 +127,9 @@ const StyledSidebar = styled('div')({
   display: 'flex',
   flexDirection: 'column',
   '@media (min-width: 1024px)': {
-    top: 40,
-  },
-});
+    top: 40
+  }
+})
 
 const StyledCounter = styled('div')(({ theme }) => ({
   display: 'flex',
@@ -142,9 +142,9 @@ const StyledCounter = styled('div')(({ theme }) => ({
   border: `1px solid ${theme.colors.black}`,
   borderRadius: 5,
   opacity: 0.5,
-  marginBottom: 10,
-}));
+  marginBottom: 10
+}))
 
 const StyledCopy = styled(Button)({
-  padding: '5px',
-});
+  padding: '5px'
+})

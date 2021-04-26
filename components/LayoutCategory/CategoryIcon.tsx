@@ -8,9 +8,9 @@ import {
   GiPalette,
   GiSuspicious,
   GiSpy,
-  GiTrophy,
-} from 'react-icons/gi';
-import { CategoryIcon as CategoryIconType } from '../../data/types';
+  GiTrophy
+} from 'react-icons/gi'
+import { CategoryIcon as CategoryIconType } from '../../data/types'
 
 /**
  * Re-export icons and load them dynamically as a variant instead of the component name
@@ -21,7 +21,7 @@ interface CategoryIconProps {
   /**
    * Takes one of icons from 'TCategoryIcon' corresponds to Icons variations
    */
-  variant: CategoryIconType;
+  variant: CategoryIconType
 }
 
 const listIcons = {
@@ -34,18 +34,18 @@ const listIcons = {
   GiPalette,
   GiSuspicious,
   GiSpy,
-  GiTrophy,
-};
+  GiTrophy
+}
 
 const CategoryIcon: React.FC<CategoryIconProps> = ({ variant }) => {
-  let Component: any = null;
+  let Component: any = null
 
   Object.entries(listIcons).forEach(([key, entry]) => {
     if (key === variant) {
-      Component = entry;
+      Component = entry
     }
-  });
-  return <Component data-testid={variant} />;
-};
+  })
+  return <Component data-testid={variant} />
+}
 
-export default CategoryIcon;
+export default CategoryIcon

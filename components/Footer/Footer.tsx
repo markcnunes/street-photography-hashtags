@@ -1,5 +1,5 @@
-import styled from '@emotion/styled';
-import Link from 'next/link';
+import styled from '@emotion/styled'
+import Link from 'next/link'
 
 const StyledFooter = styled('footer')(({ theme }) => ({
   display: 'flex',
@@ -11,9 +11,9 @@ const StyledFooter = styled('footer')(({ theme }) => ({
   fontSize: theme.fontSizes[1],
   color: theme.colors.white,
   '@media (min-width: 780px)': {
-    flexDirection: 'row',
-  },
-}));
+    flexDirection: 'row'
+  }
+}))
 
 const StyledAuthor = styled.div(({ theme }) => ({
   display: 'flex',
@@ -23,13 +23,13 @@ const StyledAuthor = styled.div(({ theme }) => ({
     color: theme.colors.white,
     marginLeft: 5,
     '&:hover': {
-      color: theme.colors.white,
-    },
+      color: theme.colors.white
+    }
   },
   '@media (min-width: 780px)': {
-    marginBottom: 0,
-  },
-}));
+    marginBottom: 0
+  }
+}))
 
 const StyledLinks = styled.div(({ theme }) => ({
   display: 'flex',
@@ -39,12 +39,12 @@ const StyledLinks = styled.div(({ theme }) => ({
   marginBottom: 20,
   a: {
     color: theme.colors.white,
-    margin: '0 10px',
+    margin: '0 10px'
   },
   '@media (min-width: 780px)': {
-    marginBottom: 0,
-  },
-}));
+    marginBottom: 0
+  }
+}))
 
 const StyleCta = styled.a(({ theme }) => ({
   fontSize: theme.fontSizes[1],
@@ -52,8 +52,8 @@ const StyleCta = styled.a(({ theme }) => ({
   border: '1px solid currentColor',
   padding: '8px 16px',
   borderRadius: 5,
-  textDecoration: 'none',
-}));
+  textDecoration: 'none'
+}))
 
 const Footer: React.FC = () => {
   return (
@@ -61,10 +61,10 @@ const Footer: React.FC = () => {
       <StyledAuthor>
         Created by
         <a
-          href='https://www.instagram.com/markcnunes/'
+          href="https://www.instagram.com/markcnunes/"
           title="Mark's website"
-          target='_blank'
-          rel='noopener noreferrer'
+          target="_blank"
+          rel="noopener noreferrer"
         >
           Mark Claus Nunes
         </a>
@@ -73,11 +73,11 @@ const Footer: React.FC = () => {
         <Link href={`/privacy`}>Privacy</Link>
         <Link href={`/terms`}>Terms of use</Link>
       </StyledLinks>
-      <Link href='/contribution'>
+      <Link href="/contribution">
         <StyleCta>Contributions are welcomed!</StyleCta>
       </Link>
     </StyledFooter>
-  );
-};
+  )
+}
 
-export default Footer;
+export default Footer

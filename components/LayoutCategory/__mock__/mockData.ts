@@ -1,4 +1,4 @@
-import { Category } from 'data/types';
+import { Category } from 'data/types'
 
 const mockData: Category = {
   category: 'candid',
@@ -33,9 +33,9 @@ const mockData: Category = {
     '#test27',
     '#test28',
     '#test29',
-    '#test30',
-  ],
-};
+    '#test30'
+  ]
+}
 export const mockDataWichSubcategories: Category = {
   category: 'all',
   icon: 'GiBallPyramid',
@@ -49,10 +49,10 @@ export const mockDataWichSubcategories: Category = {
         '#another-test2',
         '#another-test3',
         '#another-test4',
-        '#another-test5',
-      ],
-    },
-  ],
-};
+        '#another-test5'
+      ]
+    }
+  ]
+}
 
-export default mockData;
+export default mockData

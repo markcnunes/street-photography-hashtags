@@ -14,28 +14,28 @@ export type CategoryIcon =
   | 'GiPalette'
   | 'GiSuspicious'
   | 'GiSpy'
-  | 'GiTrophy';
+  | 'GiTrophy'
 
 interface CategoryCore {
   /**
    * Title of the page
    */
-  category: string;
+  category: string
   /**
    * Icon
    */
-  icon: CategoryIcon;
+  icon: CategoryIcon
   /**
    * Array of keywords
    */
-  keywords?: string[];
+  keywords?: string[]
 }
 
 export interface Category extends CategoryCore {
   /**
    * Array of categories
    */
-  subcategories?: CategoryCore[];
+  subcategories?: CategoryCore[]
 }
 
-export type Location = Omit<CategoryCore, 'icon'>;
+export type Location = Omit<CategoryCore, 'icon'>
