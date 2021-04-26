@@ -1,7 +1,7 @@
-import React from 'react';
-import styled from '@emotion/styled';
+import React from 'react'
+import styled from '@emotion/styled'
 
-import ActiveLink from 'components/ActiveLink/index';
+import ActiveLink from 'components/ActiveLink/index'
 
 const StyledNavbar = styled('nav')(({ theme }) => ({
   display: 'inline-flex',
@@ -19,33 +19,33 @@ const StyledNavbar = styled('nav')(({ theme }) => ({
     border: '1px solid transparent',
     borderRadius: theme.radii[2],
     '&.is-active': {
-      borderColor: theme.colors.muted,
+      borderColor: theme.colors.muted
     },
     '&:hover': {
-      borderColor: 'currentColor',
+      borderColor: 'currentColor'
     },
     '& + a': {
-      marginLeft: 10,
-    },
-  },
-}));
+      marginLeft: 10
+    }
+  }
+}))
 
 const Navbar = () => {
   return (
-    <StyledNavbar role='navigation' aria-label='main navigation'>
-      <ActiveLink activeClassName='is-active' href='/'>
+    <StyledNavbar role="navigation" aria-label="main navigation">
+      <ActiveLink activeClassName="is-active" href="/">
         <a>Categories</a>
       </ActiveLink>
 
-      <ActiveLink activeClassName='is-active' href='/about'>
-        <a className='navbar-item'>About</a>
+      <ActiveLink activeClassName="is-active" href="/about">
+        <a className="navbar-item">About</a>
       </ActiveLink>
 
-      <ActiveLink activeClassName='is-active' href='/contribution'>
-        <a className='navbar-item'>Contribution</a>
+      <ActiveLink activeClassName="is-active" href="/contribution">
+        <a className="navbar-item">Contribution</a>
       </ActiveLink>
     </StyledNavbar>
-  );
-};
+  )
+}
 
-export default Navbar;
+export default Navbar

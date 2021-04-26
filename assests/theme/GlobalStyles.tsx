@@ -1,7 +1,7 @@
-import React from 'react';
-import { css, Global } from '@emotion/react';
-import theme from './theme';
-import { normalize } from 'polished';
+import React from 'react'
+import { css, Global } from '@emotion/react'
+import theme from './theme'
+import { normalize } from 'polished'
 
 function GlobalStyles() {
   return (
@@ -63,7 +63,7 @@ function GlobalStyles() {
         }
       `}
     />
-  );
+  )
 }
 
-export default GlobalStyles;
+export default GlobalStyles

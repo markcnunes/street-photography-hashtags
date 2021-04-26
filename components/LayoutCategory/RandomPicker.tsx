@@ -1,35 +1,35 @@
-import styled from '@emotion/styled';
-import React, { useState } from 'react';
-import { GiPerspectiveDiceSixFacesThree } from 'react-icons/gi';
-import { Category } from 'data/types';
-import Button from 'components/Button';
-import RandomModal from './RandomModal';
+import styled from '@emotion/styled'
+import React, { useState } from 'react'
+import { GiPerspectiveDiceSixFacesThree } from 'react-icons/gi'
+import { Category } from 'data/types'
+import Button from 'components/Button'
+import RandomModal from './RandomModal'
 
 interface Ioptions {
   /**
    * Value of the select field to determine the limit of keywords to output from the Random Picker.
    */
-  value: string;
+  value: string
 }
 
-type RandomPickerProps = Pick<Category, 'keywords'>;
+type RandomPickerProps = Pick<Category, 'keywords'>
 
 /**
  * Create array of 30 items
  */
-const options: Ioptions[] = Array.from(Array(30).keys()).map((item) => ({
-  value: (item + 1).toString(),
-}));
+const options: Ioptions[] = Array.from(Array(30).keys()).map(item => ({
+  value: (item + 1).toString()
+}))
 
-const StyledRandomPicker = styled('div')((props) => ({
+const StyledRandomPicker = styled('div')(props => ({
   h4: {
-    marginTop: 0,
+    marginTop: 0
   },
   form: {
     '& > *': {
       width: '100%',
-      justifyContent: 'center',
-    },
+      justifyContent: 'center'
+    }
   },
   label: {
     position: 'relative',
@@ -48,13 +48,13 @@ const StyledRandomPicker = styled('div')((props) => ({
       position: 'absolute',
       top: '50%',
       right: '15px',
-      pointerEvents: 'none',
+      pointerEvents: 'none'
     },
     '&::before': {
-      transform: 'translateY(-180%) rotate(180deg)',
+      transform: 'translateY(-180%) rotate(180deg)'
     },
     '&::after': {
-      transform: 'translateY(-20%)',
+      transform: 'translateY(-20%)'
     },
     select: {
       appearance: 'none',
@@ -62,16 +62,16 @@ const StyledRandomPicker = styled('div')((props) => ({
       padding: '10px 45px 10px 35px',
       background: props.theme.colors.white,
       border: 'none',
-      outline: 'none',
-    },
+      outline: 'none'
+    }
   },
   button: {
     svg: {
       width: 25,
-      height: 25,
-    },
-  },
-}));
+      height: 25
+    }
+  }
+}))
 
 /**
  * @desc Randomly chooses keywords for the user.
@@ -79,40 +79,40 @@ const StyledRandomPicker = styled('div')((props) => ({
 const RandomPicker: React.FC<RandomPickerProps> = ({ keywords }) => {
   const [randomPickedKeywords, setRandomPickedKeywords] = useState<
     RandomPickerProps['keywords']
-  >([]);
-  const [showModal, setShowModal] = useState(false);
+  >([])
+  const [showModal, setShowModal] = useState(false)
 
   const openeModal = (e: MouseEvent) => {
-    e.preventDefault();
-    handleModal();
-  };
+    e.preventDefault()
+    handleModal()
+  }
 
   const handleModal = () => {
     if (!showModal) {
-      handleRandomSelection();
+      handleRandomSelection()
     }
-    setShowModal(!showModal);
-  };
+    setShowModal(!showModal)
+  }
 
   /**
    * @desc Finds a random index from optionsAvailable and moves this item from this tist to the result.
    */
   const handleRandomSelection = () => {
-    const limit = Number(selectedOption);
+    const limit = Number(selectedOption)
 
-    let optionsAvailable: RandomPickerProps['keywords'] = keywords;
-    let result: RandomPickerProps['keywords'] = [];
+    let optionsAvailable: RandomPickerProps['keywords'] = keywords
+    const result: RandomPickerProps['keywords'] = []
 
     for (let i = 0; result.length < limit; i++) {
-      let randomNum = Math.floor(Math.random() * optionsAvailable.length);
-      let option = optionsAvailable[randomNum];
-      result.push(option);
-      optionsAvailable = optionsAvailable.filter((o) => o !== option);
+      const randomNum = Math.floor(Math.random() * optionsAvailable.length)
+      const option = optionsAvailable[randomNum]
+      result.push(option)
+      optionsAvailable = optionsAvailable.filter(o => o !== option)
     }
-    setRandomPickedKeywords(result);
-  };
+    setRandomPickedKeywords(result)
+  }
 
-  const [selectedOption, setSelectedOption] = useState(options[19].value);
+  const [selectedOption, setSelectedOption] = useState(options[19].value)
   return (
     <StyledRandomPicker>
       <h4>Random selection of keywords</h4>
@@ -121,9 +121,9 @@ const RandomPicker: React.FC<RandomPickerProps> = ({ keywords }) => {
           Quantity
           <select
             value={selectedOption}
-            onChange={(e) => setSelectedOption(e.target.value)}
+            onChange={e => setSelectedOption(e.target.value)}
           >
-            {options.map((o) => (
+            {options.map(o => (
               <option key={o.value} value={o.value}>
                 {o.value}
               </option>
@@ -131,13 +131,13 @@ const RandomPicker: React.FC<RandomPickerProps> = ({ keywords }) => {
           </select>
         </label>
         <Button
-          icon='withText'
-          title='Generate a random limited selection of keywords'
+          icon="withText"
+          title="Generate a random limited selection of keywords"
           onClick={openeModal}
           disabled={Number(selectedOption) > keywords.length}
         >
           <GiPerspectiveDiceSixFacesThree />
-          I'm Feeling Lucky
+          I&apos;m Feeling Lucky
         </Button>
       </form>
       <RandomModal
@@ -146,7 +146,7 @@ const RandomPicker: React.FC<RandomPickerProps> = ({ keywords }) => {
         handleModal={handleModal}
       />
     </StyledRandomPicker>
-  );
-};
+  )
+}
 
-export default RandomPicker;
+export default RandomPicker

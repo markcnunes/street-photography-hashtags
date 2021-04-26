@@ -1,1 +1,1 @@
-export { default } from './KeywordsList';
+export { default } from './KeywordsList'

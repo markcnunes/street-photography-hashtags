@@ -1,9 +1,9 @@
-import { Location } from './types';
+import { Location } from './types'
 
 const locations: Location[] = [
   {
     category: 'europe',
-    keywords: ['#streetsineurope'],
+    keywords: ['#streetsineurope']
   },
   {
     category: 'london',
@@ -13,9 +13,9 @@ const locations: Location[] = [
       '#londonstreetlife',
       '#londonstreets',
       '#londonphotographer',
-      '#londonstreetphotography',
-    ],
-  },
-];
+      '#londonstreetphotography'
+    ]
+  }
+]
 
-export default locations;
+export default locations

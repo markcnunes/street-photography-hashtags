@@ -1,4 +1,4 @@
-import { Category } from 'data/types';
+import { Category } from 'data/types'
 
 const mockData: Category = {
   category: 'Candid',
@@ -33,7 +33,7 @@ const mockData: Category = {
     '#test27',
     '#test28',
     '#test29',
-    '#test30',
-  ],
-};
-export default mockData;
+    '#test30'
+  ]
+}
+export default mockData

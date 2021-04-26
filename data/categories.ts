@@ -1,4 +1,4 @@
-import { Category } from './types';
+import { Category } from './types'
 
 const categories: Category[] = [
   {
@@ -90,8 +90,8 @@ const categories: Category[] = [
       '#wearethestreets',
       '#worldviewmag',
       '#zonestreet',
-      '#street_unseen',
-    ],
+      '#street_unseen'
+    ]
   },
   {
     category: 'portrait',
@@ -103,13 +103,13 @@ const categories: Category[] = [
       '#streetportraiture',
       '#streetportraitphotography',
       '#streetportrait',
-      '#urbanportrait',
-    ],
+      '#urbanportrait'
+    ]
   },
   {
     category: 'architecture',
     icon: 'GiModernCity',
-    keywords: ['#archilovers', '#architecturelovers', '#streetarchitecture'],
+    keywords: ['#archilovers', '#architecturelovers', '#streetarchitecture']
   },
   {
     category: 'candid',
@@ -134,8 +134,8 @@ const categories: Category[] = [
       '#candidslumber',
       '#candidphotos',
       '#candidasa',
-      '#candidpic',
-    ],
+      '#candidpic'
+    ]
   },
   {
     category: 'color',
@@ -146,8 +146,8 @@ const categories: Category[] = [
       '#spi_colour',
       '#streetcolor',
       '#streetcolour',
-      '#colorstreets',
-    ],
+      '#colorstreets'
+    ]
   },
   {
     category: 'b&w',
@@ -166,8 +166,8 @@ const categories: Category[] = [
       '#monochrome',
       '#blackandwhitephotography',
       '#blackandwhitephoto',
-      '#monochromatic',
-    ],
+      '#monochromatic'
+    ]
   },
   {
     category: 'film',
@@ -187,13 +187,13 @@ const categories: Category[] = [
       '#shootfilm',
       '#staybrokeshootfilm',
       '#filmic_streets',
-      '#filmnotdead',
-    ],
+      '#filmnotdead'
+    ]
   },
   {
     category: 'documentary',
     icon: 'GiNewspaper',
-    keywords: ['#photodocumentary'],
+    keywords: ['#photodocumentary']
   },
   {
     category: 'visual poetry',
@@ -231,9 +231,9 @@ const categories: Category[] = [
       '#thinkverylittle',
       '#thisaintartschool',
       '#truecolormag',
-      '#wtns',
-    ],
-  },
-];
+      '#wtns'
+    ]
+  }
+]
 
-export default categories;
+export default categories

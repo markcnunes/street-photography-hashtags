@@ -1,21 +1,21 @@
-import styled from '@emotion/styled';
-import { rgba } from 'polished';
-import React from 'react';
-import { FiXCircle } from 'react-icons/fi';
-import Modal from 'react-modal';
-import { Category } from 'data/types';
-import Button from 'components/Button';
-import KeywordsList from 'components/KeywordsList/KeywordsList';
+import styled from '@emotion/styled'
+import { rgba } from 'polished'
+import React from 'react'
+import { FiXCircle } from 'react-icons/fi'
+import Modal from 'react-modal'
+import { Category } from 'data/types'
+import Button from 'components/Button'
+import KeywordsList from 'components/KeywordsList/KeywordsList'
 
 interface IRandomModal extends Pick<Category, 'keywords'> {
   /**
    * If `true`, the modal will open.
    */
-  showModal: boolean;
+  showModal: boolean
   /**
    * Takes a function to close the modal
    */
-  handleModal: (event: any) => void;
+  handleModal: (event: any) => void
 }
 const StyledModal = styled(Modal)(({ theme }) => ({
   display: 'flex',
@@ -31,7 +31,7 @@ const StyledModal = styled(Modal)(({ theme }) => ({
   h3: {
     color: theme.colors.white,
     textAlign: 'center',
-    width: '100%',
+    width: '100%'
   },
   '.modal__body': {
     display: 'flex',
@@ -43,7 +43,7 @@ const StyledModal = styled(Modal)(({ theme }) => ({
     margin: '1rem 0',
     overflow: 'auto',
     borderRadius: '.5rem',
-    background: theme.colors.white,
+    background: theme.colors.white
   },
   '.modal__action': {
     display: 'flex',
@@ -52,51 +52,51 @@ const StyledModal = styled(Modal)(({ theme }) => ({
     marginTop: 20,
     '& > *': {
       marginRight: 15,
-      marginLeft: 15,
-    },
+      marginLeft: 15
+    }
   },
   '@media (min-width: 720px)': {
     padding: '2rem',
     '.modal__body': {
       maxWidth: '70vw',
       padding: '2rem',
-      margin: '2rem auto',
-    },
+      margin: '2rem auto'
+    }
   },
   '@media (min-width: 1280px)': {
-    maxWidth: 1200,
-  },
-}));
+    maxWidth: 1200
+  }
+}))
 
-Modal.setAppElement('body');
+Modal.setAppElement('body')
 
 const RandomModal: React.FC<IRandomModal> = ({
   keywords,
   showModal,
-  handleModal,
+  handleModal
 }: any) => {
   const handleClosesModal = () => {
-    handleModal();
-  };
+    handleModal()
+  }
 
   return (
     <StyledModal
       isOpen={showModal}
       onRequestClose={handleClosesModal}
-      contentLabel='Result Modal'
+      contentLabel="Result Modal"
       closeTimeoutMS={200}
-      className='modal'
+      className="modal"
     >
-      <h3 className='modal__title'>Random Picker</h3>
-      <div className='modal__body'>
-        <KeywordsList aria-label='Result List' keywords={keywords} />
+      <h3 className="modal__title">Random Picker</h3>
+      <div className="modal__body">
+        <KeywordsList aria-label="Result List" keywords={keywords} />
       </div>
-      <div className='modal__action'>
+      <div className="modal__action">
         <Button
-          color='white'
-          variant='outlined'
-          icon='withText'
-          title='Generate a random limited selection of keywords'
+          color="white"
+          variant="outlined"
+          icon="withText"
+          title="Generate a random limited selection of keywords"
           onClick={handleClosesModal}
         >
           <FiXCircle />
@@ -104,7 +104,7 @@ const RandomModal: React.FC<IRandomModal> = ({
         </Button>
       </div>
     </StyledModal>
-  );
-};
+  )
+}
 
-export default RandomModal;
+export default RandomModal

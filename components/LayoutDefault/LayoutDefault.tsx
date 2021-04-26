@@ -1,30 +1,30 @@
-import styled from '@emotion/styled';
-import { darken, rgba } from 'polished';
-import React from 'react';
+import styled from '@emotion/styled'
+import { darken, rgba } from 'polished'
+import React from 'react'
 
 interface ILayoutDefault {
   /**
    * Takes string
    */
-  title?: string;
+  title?: string
   /**
    * Content of component
    */
-  children?: React.ReactNode;
+  children?: React.ReactNode
   /**
    * Takes string
    */
-  className?: string;
+  className?: string
 }
 
 const StyledLayoutDefault = styled('div')(({ theme }) => ({
   flex: '1 0 0',
   color: theme.colors.white,
   a: {
-    color: theme.colors.white,
+    color: theme.colors.white
   },
   p: {
-    lineHeight: 1.5,
+    lineHeight: 1.5
   },
 
   '.subheader': {
@@ -46,13 +46,13 @@ const StyledLayoutDefault = styled('div')(({ theme }) => ({
       padding: 20,
       background: `linear-gradient(10deg, ${rgba(
         theme.colors.white,
-        0.1,
+        0.1
       )} 0%, ${rgba(darken(0.1, theme.colors.white), 0)} 100%)`,
-      borderRadius: 5,
+      borderRadius: 5
     },
     h3: {
       margin: '0 auto',
-      textTransform: 'uppercase',
+      textTransform: 'uppercase'
     },
 
     '.title': {
@@ -61,9 +61,9 @@ const StyledLayoutDefault = styled('div')(({ theme }) => ({
       alignItems: 'center',
       textAlign: 'center',
       svg: {
-        marginRight: 5,
-      },
-    },
+        marginRight: 5
+      }
+    }
   },
   main: {
     display: 'flex',
@@ -76,22 +76,22 @@ const StyledLayoutDefault = styled('div')(({ theme }) => ({
     margin: '0 auto',
 
     '& > *': {
-      width: '100%',
-    },
-  },
-}));
+      width: '100%'
+    }
+  }
+}))
 
 const LayoutDefault: React.FC<ILayoutDefault> = ({ title, children }) => {
   return (
     <StyledLayoutDefault>
-      <div className='subheader'>
-        <div className='wrapper'>
-          <h2 className='title'>{title}</h2>
+      <div className="subheader">
+        <div className="wrapper">
+          <h2 className="title">{title}</h2>
         </div>
       </div>
       <main>{children}</main>
     </StyledLayoutDefault>
-  );
-};
+  )
+}
 
-export default LayoutDefault;
+export default LayoutDefault

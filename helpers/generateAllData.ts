@@ -1,4 +1,4 @@
-import { Category } from 'data/types';
+import { Category } from 'data/types'
 
 /**
  * Check the slug and identify which data should output.
@@ -8,8 +8,8 @@ const generateAllData = (categories: Category[]): Category => {
   return {
     category: 'all',
     icon: 'GiBallPyramid' as const,
-    subcategories: categories,
-  };
-};
+    subcategories: categories
+  }
+}
 
-export default generateAllData;
+export default generateAllData

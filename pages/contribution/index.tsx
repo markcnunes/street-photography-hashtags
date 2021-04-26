@@ -1,40 +1,40 @@
-import VerifyKeyword from 'components/VerifyKeyword';
-import LayoutDefault from 'components/LayoutDefault';
-import styled from '@emotion/styled';
-import { GetStaticProps } from 'next';
-import categories from 'data/categories';
+import VerifyKeyword from 'components/VerifyKeyword'
+import LayoutDefault from 'components/LayoutDefault'
+import styled from '@emotion/styled'
+import { GetStaticProps } from 'next'
+import categories from 'data/categories'
 
 const StyledDescription = styled('div')({
   '& > div:last-of-type': {
-    width: '100%',
-  },
-});
+    width: '100%'
+  }
+})
 
 export default function Contribution({ categories: allCategories }) {
   return (
-    <LayoutDefault title='Suggesting new keywords'>
+    <LayoutDefault title="Suggesting new keywords">
       <StyledDescription>
         <p>
           Contributions are welcomed! If you have suggestions to improve some of
-          the categories, please let's know.
+          the categories, please let&apos;s know.
         </p>
         <h3>Contribution Guidelines</h3>
         <p>
           Please read our{' '}
           <a
-            href='https://github.com/markcnunes/street-photography-hashtags/contributing.md'
-            title='website'
-            target='_blank'
-            rel='noopener noreferrer'
+            href="https://github.com/markcnunes/street-photography-hashtags/contributing.md"
+            title="website"
+            target="_blank"
+            rel="noopener noreferrer"
           >
             Contribution Guidelines
           </a>{' '}
           and note that this project is released with a{' '}
           <a
-            href='https://github.com/markcnunes/street-photography-hashtags/code-of-conduct.md'
-            title='website'
-            target='_blank'
-            rel='noopener noreferrer'
+            href="https://github.com/markcnunes/street-photography-hashtags/code-of-conduct.md"
+            title="website"
+            target="_blank"
+            rel="noopener noreferrer"
           >
             Contributor Code of Conduct
           </a>
@@ -42,27 +42,27 @@ export default function Contribution({ categories: allCategories }) {
         </p>
         <h3>Adding a keyword</h3>
         <p>
-          Only hashtags are accepted. Mentions for keywords won't be allowed
+          Only hashtags are accepted. Mentions for keywords won&apos;t be allowed
           because these accounts most of time have hastags as well. It will help
           us to filter duplications and keep the list simple. Ensure the keyword
           has good visibility. Wait at least 30 days if it is a newborn keyword
           before submitting it, to give it a chance to mature. Also, check if it
-          doesn't exist in some of the categories, as yours may be a duplicate,
+          doesn&apos;t exist in some of the categories, as yours may be a duplicate,
           you can send the suggestions to{' '}
           <a
-            href='https://www.instagram.com/markcnunes/'
+            href="https://www.instagram.com/markcnunes/"
             title="Mark's website"
-            target='_blank'
-            rel='noopener noreferrer'
+            target="_blank"
+            rel="noopener noreferrer"
           >
             @markcnunes
           </a>{' '}
           or make a pull request that adheres to the{' '}
           <a
-            href='https://github.com/markcnunes/street-photography-hashtags/contributing.md'
-            title='website'
-            target='_blank'
-            rel='noopener noreferrer'
+            href="https://github.com/markcnunes/street-photography-hashtags/contributing.md"
+            title="website"
+            target="_blank"
+            rel="noopener noreferrer"
           >
             Contribution Guidelines
           </a>{' '}
@@ -73,14 +73,14 @@ export default function Contribution({ categories: allCategories }) {
         <VerifyKeyword keywords={allCategories} />
       </StyledDescription>
     </LayoutDefault>
-  );
+  )
 }
 
 export const getStaticProps: GetStaticProps = async () => {
   // Pass post data to the page via props
   return {
     props: {
-      categories,
-    },
-  };
-};
+      categories
+    }
+  }
+}

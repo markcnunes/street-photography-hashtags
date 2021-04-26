@@ -11,7 +11,6 @@ on:
 
 jobs:
   build:
-    name: Merge to development
     runs-on: ubuntu-latest
     timeout-minutes: 5
 
@@ -20,3 +19,5 @@ jobs:
       - run: yarn ci
       - run: yarn run build
       - run: yarn test
+      - run: yarn lint
+      - run: yarn prettier-check

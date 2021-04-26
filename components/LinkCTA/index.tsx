@@ -1,1 +1,1 @@
-export { default } from "./LinkCTA";
+export { default } from './LinkCTA'

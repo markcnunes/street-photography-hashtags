@@ -1,51 +1,51 @@
-import React, { ChangeEvent, useState } from 'react';
-import styled from '@emotion/styled';
+import React, { ChangeEvent, useState } from 'react'
+import styled from '@emotion/styled'
 
 export interface CategoryFilterProps {
   /**
    * Option of keywords available to be filtered.
    */
-  options: string[];
+  options: string[]
   /**
    * Action to filter keywords.
    */
-  filterKeywords: (arg: string[]) => void;
+  filterKeywords: (arg: string[]) => void
 }
 
 const CategoryFilter = ({ options, filterKeywords }: CategoryFilterProps) => {
-  const [hidenCategories, setHidenCategories] = useState<string[]>([]);
+  const [hidenCategories, setHidenCategories] = useState<string[]>([])
 
   // Show or hide some specific category
   const handleInputChange = (event: ChangeEvent<HTMLInputElement>) => {
-    const name = event.target.name;
-    let updateHidenCategories;
+    const name = event.target.name
+    let updateHidenCategories
 
     if (event.target.checked) {
       // add
-      updateHidenCategories = [...hidenCategories, name];
+      updateHidenCategories = [...hidenCategories, name]
     } else {
       // remove
-      updateHidenCategories = hidenCategories.filter((item) => item !== name);
+      updateHidenCategories = hidenCategories.filter(item => item !== name)
     }
-    filterKeywords(updateHidenCategories);
-    setHidenCategories(updateHidenCategories);
-  };
+    filterKeywords(updateHidenCategories)
+    setHidenCategories(updateHidenCategories)
+  }
 
   // Show or hide all keywords
   const handleInputChangeAll = (event: ChangeEvent<HTMLInputElement>) => {
-    const name = event.target.name;
-    let updateHidenCategories: string[];
+    const name = event.target.name
+    let updateHidenCategories: string[]
 
     if (name === 'all') {
-      updateHidenCategories = [];
+      updateHidenCategories = []
     } else {
       // if name = none
-      updateHidenCategories = options;
+      updateHidenCategories = options
     }
 
-    filterKeywords(updateHidenCategories);
-    setHidenCategories(updateHidenCategories);
-  };
+    filterKeywords(updateHidenCategories)
+    setHidenCategories(updateHidenCategories)
+  }
 
   return (
     <StyledCategoryFilter>
@@ -57,8 +57,8 @@ const CategoryFilter = ({ options, filterKeywords }: CategoryFilterProps) => {
       >
         Show All
         <input
-          name='all'
-          type='checkbox'
+          name="all"
+          type="checkbox"
           checked={hidenCategories.length === options.length}
           onChange={handleInputChangeAll}
         />
@@ -66,17 +66,17 @@ const CategoryFilter = ({ options, filterKeywords }: CategoryFilterProps) => {
       <label className={hidenCategories.length === 0 ? 'active' : undefined}>
         Hide All
         <input
-          name='none'
-          type='checkbox'
+          name="none"
+          type="checkbox"
           checked={hidenCategories.length === 0}
           onChange={handleInputChangeAll}
         />
       </label>
-      {options.map((item) => (
+      {options.map(item => (
         <label
           key={item}
           className={
-            hidenCategories.some((category) => category === item)
+            hidenCategories.some(category => category === item)
               ? 'active'
               : undefined
           }
@@ -84,17 +84,17 @@ const CategoryFilter = ({ options, filterKeywords }: CategoryFilterProps) => {
           {item}
           <input
             name={item}
-            type='checkbox'
-            checked={hidenCategories.some((category) => category === item)}
+            type="checkbox"
+            checked={hidenCategories.some(category => category === item)}
             onChange={handleInputChange}
           />
         </label>
       ))}
     </StyledCategoryFilter>
-  );
-};
+  )
+}
 
-export default CategoryFilter;
+export default CategoryFilter
 
 const StyledCategoryFilter = styled('form')(({ theme }) => ({
   display: 'flex',
@@ -111,7 +111,7 @@ const StyledCategoryFilter = styled('form')(({ theme }) => ({
   h4: {
     margin: 0,
     width: '100%',
-    textAlign: 'center',
+    textAlign: 'center'
   },
   label: {
     display: 'flex',
@@ -123,21 +123,21 @@ const StyledCategoryFilter = styled('form')(({ theme }) => ({
     margin: 5,
     textTransform: 'capitalize',
     '&.active': {
-      opacity: 0.4,
+      opacity: 0.4
     },
     '&:hover': {
       color: theme.colors.black,
-      background: theme.colors.white,
+      background: theme.colors.white
     },
     input: {
-      display: 'none',
-    },
+      display: 'none'
+    }
   },
   '@media (min-width: 780px)': {
     h4: {
       width: 'auto',
       lineHeight: 1,
-      marginRight: 10,
-    },
-  },
-}));
+      marginRight: 10
+    }
+  }
+}))
