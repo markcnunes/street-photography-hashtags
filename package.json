@@ -10,7 +10,8 @@
     "test": "jest",
     "prettier-write": "prettier --write .",
     "prettier-check": "prettier --check .",
-    "lint": "eslint . --ext ts --ext js --ext tsx --ext json"
+    "lint": "eslint . --ext ts --ext js --ext tsx --ext json",
+    "typescript-check": "tsc --build --pretty tsconfig.json"
   },
   "dependencies": {
     "@emotion/react": "^11.1.1",

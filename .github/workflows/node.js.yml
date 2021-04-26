@@ -10,14 +10,19 @@ on:
     branches: [development]
 
 jobs:
-  build:
+  app:
     runs-on: ubuntu-latest
     timeout-minutes: 5
 
     steps:
       - uses: actions/checkout@v2
+      - name: Run CI
       - run: yarn ci
+      - name: Build and install deps
       - run: yarn run build
-      - run: yarn test
-      - run: yarn lint
+      - name: Prettier
       - run: yarn prettier-check
+      - name: ESLint
+      - run: yarn lint
+      - name: Jest
+      - run: yarn test

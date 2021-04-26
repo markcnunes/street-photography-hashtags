@@ -11,8 +11,8 @@ export default function About() {
         impressions. Instagram changes constantly, and they seem to don&apos;t
         promote hashtags as much as before, maybe because street photography is
         getting extremely competitive and also because posts are only a fraction
-        how Instagram is used now. The hashtags won&apos;t do much but every help
-        counts! There is also the chance of getting your photos featured on
+        how Instagram is used now. The hashtags won&apos;t do much but every
+        help counts! There is also the chance of getting your photos featured on
         other Instagram accounts.
       </p>
       <p>

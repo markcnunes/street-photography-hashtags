@@ -42,13 +42,13 @@ export default function Contribution({ categories: allCategories }) {
         </p>
         <h3>Adding a keyword</h3>
         <p>
-          Only hashtags are accepted. Mentions for keywords won&apos;t be allowed
-          because these accounts most of time have hastags as well. It will help
-          us to filter duplications and keep the list simple. Ensure the keyword
-          has good visibility. Wait at least 30 days if it is a newborn keyword
-          before submitting it, to give it a chance to mature. Also, check if it
-          doesn&apos;t exist in some of the categories, as yours may be a duplicate,
-          you can send the suggestions to{' '}
+          Only hashtags are accepted. Mentions for keywords won&apos;t be
+          allowed because these accounts most of time have hastags as well. It
+          will help us to filter duplications and keep the list simple. Ensure
+          the keyword has good visibility. Wait at least 30 days if it is a
+          newborn keyword before submitting it, to give it a chance to mature.
+          Also, check if it doesn&apos;t exist in some of the categories, as
+          yours may be a duplicate, you can send the suggestions to{' '}
           <a
             href="https://www.instagram.com/markcnunes/"
             title="Mark's website"
