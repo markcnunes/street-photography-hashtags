@@ -41,7 +41,7 @@ const Header: React.FC = () => {
     <StyledHeader>
       <Link href="/">
         <a className="logo" title="home">
-          <img src={'./logo-white.svg'} alt="Logo" />
+          <img src={'./logo-white.svg'} alt="Logo" width="371" height="144" />
         </a>
       </Link>
 

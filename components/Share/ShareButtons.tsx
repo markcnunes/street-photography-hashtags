@@ -36,6 +36,8 @@ const ShareButtons: React.FC<IShareButtons> = props => {
     })
   }
 
+  const size = 32
+
   return (
     <div className="share-buttons">
       <FacebookShareButton
@@ -43,14 +45,14 @@ const ShareButtons: React.FC<IShareButtons> = props => {
         title={title}
         className="share-buttons__item"
       >
-        <FacebookIcon size={32} round bgStyle={{ fill: 'none' }} />
+        <FacebookIcon size={size} round bgStyle={{ fill: 'none' }} />
       </FacebookShareButton>
       <TwitterShareButton
         url={shareUrl}
         title={title}
         className="share-buttons__item"
       >
-        <TwitterIcon size={32} round bgStyle={{ fill: 'none' }} />
+        <TwitterIcon size={size} round bgStyle={{ fill: 'none' }} />
       </TwitterShareButton>
 
       <RedditShareButton
@@ -60,7 +62,7 @@ const ShareButtons: React.FC<IShareButtons> = props => {
         windowHeight={460}
         className="share-buttons__item"
       >
-        <RedditIcon size={32} round bgStyle={{ fill: 'none' }} />
+        <RedditIcon size={size} round bgStyle={{ fill: 'none' }} />
       </RedditShareButton>
       <WhatsappShareButton
         url={shareUrl}
@@ -68,7 +70,7 @@ const ShareButtons: React.FC<IShareButtons> = props => {
         separator=":: "
         className="share-buttons__item"
       >
-        <WhatsappIcon size={32} round bgStyle={{ fill: 'none' }} />
+        <WhatsappIcon size={size} round bgStyle={{ fill: 'none' }} />
       </WhatsappShareButton>
 
       <Button
@@ -81,8 +83,8 @@ const ShareButtons: React.FC<IShareButtons> = props => {
         <svg
           className="share-buttons__icon"
           viewBox="0 0 24 24"
-          width="24"
-          height="24"
+          width={24}
+          height={24}
           stroke="currentColor"
           strokeWidth="2"
           fill="none"

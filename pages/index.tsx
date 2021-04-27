@@ -74,6 +74,11 @@ export default function Home({ categories, locations }) {
     <>
       <Head>
         <title>Street Photography Hashtags</title>
+        <meta
+          name="description"
+          content="A curation of hashtags for street photography on Instagram."
+        />
+        <meta name="author" content="Mark Claus Nunes" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <StyledHome>
