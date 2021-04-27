@@ -23,6 +23,7 @@ const StyledShare = styled('div')(props => ({
     flexWrap: 'wrap'
   },
   '.share-buttons__item': {
+    padding: '8px !important',
     svg: {
       borderRadius: '50%',
       '&:hover': {
@@ -35,8 +36,8 @@ const StyledShare = styled('div')(props => ({
     justifyContent: 'center',
     alignItems: 'center',
     borderRadius: '50%',
-    height: 36,
-    width: 36,
+    height: 48,
+    width: 51,
     padding: 0,
     '&:hover': {
       color: props.theme.colors.white,

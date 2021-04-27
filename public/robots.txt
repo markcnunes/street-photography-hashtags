@@ -1,4 +1,4 @@
 # https://www.robotstxt.org/robotstxt.html
 User-agent: *
 Disallow:
-Sitemap: https://street-photography-hashtags.vercel.app/sitemap.xml
+Sitemap: https://www.streetphotographyhashtags.uksitemap.xml

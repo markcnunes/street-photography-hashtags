@@ -170,7 +170,9 @@ exports[`<Header /> matches snapshot 1`] = `
     >
       <img
         alt="Logo"
+        height="144"
         src="./logo-white.svg"
+        width="371"
       />
     </a>
     <nav

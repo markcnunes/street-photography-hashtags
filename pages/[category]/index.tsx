@@ -11,6 +11,10 @@ function Category({ category }) {
     <>
       <Head>
         <title>Street Photography Hashtags - {category.category}</title>
+        <meta
+          name="description"
+          content={`A curation of hashtags related to ${category.category} for street photography on Instagram.`}
+        />
       </Head>
       <LayoutCategory
         category={category.category}

@@ -49,6 +49,10 @@ exports[`<Share /> matchs snapshot 1`] = `
   flex-wrap: wrap;
 }
 
+.emotion-0 .share-buttons__item {
+  padding: 8px!important;
+}
+
 .emotion-0 .share-buttons__item svg {
   border-radius: 50%;
 }
@@ -71,8 +75,8 @@ exports[`<Share /> matchs snapshot 1`] = `
   -ms-flex-align: center;
   align-items: center;
   border-radius: 50%;
-  height: 36px;
-  width: 36px;
+  height: 48px;
+  width: 51px;
   padding: 0;
 }
 

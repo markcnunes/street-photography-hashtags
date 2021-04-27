@@ -42,7 +42,7 @@ const StyledLinkCTA = styled.a(props => ({
   flexWrap: 'wrap',
   flex: '1 0 0',
   padding: 30,
-  margin: 10,
+  margin: 20,
   minWidth: 150,
   textDecoration: 'none',
   outline: 0,
@@ -78,7 +78,8 @@ const StyledLinkCTA = styled.a(props => ({
     left: 0,
     top: 0,
     width: '100%',
-    height: '100%',
+    paddingBottom: '100%',
+    height: 0,
     background: `linear-gradient(90deg, ${rgba(
       props.theme.colors.primary,
       0.3
