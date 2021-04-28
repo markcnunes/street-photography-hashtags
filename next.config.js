@@ -5,9 +5,5 @@ module.exports = withPWA({
     disable: process.env.NODE_ENV !== 'production',
     dest: 'public'
   },
-  publicExcludes: [
-    '!robots.txt',
-    '!sitemap.xml.gz',
-    '!googlec170c76d3334398b.html'
-  ]
+  publicExcludes: ['!robots.txt', '!sitemap.xml.gz', '!google*.html']
 })

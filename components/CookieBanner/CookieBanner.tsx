@@ -98,9 +98,11 @@ const CookieBanner = () => {
         containerClasses="cookie"
         contentClasses="cookie__message"
       >
-        This website uses cookies to analyze web traffic. To find out more, read
-        our <Link href={`/privacy`}>privacy</Link> and{' '}
-        <Link href={`/terms`}>terms of use</Link>.
+        By using this website, you agree to our use of cookies. We use cookies
+        to provide you with a great experience and to help our website run
+        effectively. This website uses cookies to analyze web traffic.{' '}
+        <Link href={`/privacy`}>privacy</Link> and{' '}
+        <Link href={`/terms`}>terms of use</Link>
       </CookieConsent>
     </StyledCookieBanner>
   )
