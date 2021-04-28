@@ -1,3 +1,5 @@
+import { rgba } from 'polished'
+
 const colors = {
   primary: '#615cf5',
   secondary: '#684e79',
@@ -22,7 +24,10 @@ const theme = {
     muted: colors.muted,
     black: colors.black,
     white: colors.white,
-    gradient: `linear-gradient(90deg, ${colors.black} 0%, ${colors.muted} 100%)`
+    gradient: `linear-gradient(90deg, ${rgba(colors.black, 1)} 0%, ${rgba(
+      colors.muted,
+      1
+    )} 100%)`
   },
   radii: [0, 2, 4, 8]
 }

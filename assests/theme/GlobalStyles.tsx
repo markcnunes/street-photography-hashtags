@@ -26,7 +26,7 @@ function GlobalStyles() {
         #__next {
           display: flex;
           flex-wrap: wrap;
-          background: ${theme.colors.gradient};
+          background-image: ${theme.colors.gradient};
           min-height: 100vh;
         }
         a {
