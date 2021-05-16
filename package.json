@@ -24,7 +24,6 @@
     "ga-4-react": "^0.1.26",
     "helpers": "link:./helpers",
     "next": "10.x",
-    "next-pwa": "^5.2.15",
     "pages": "link:./pages",
     "polished": "^4.0.5",
     "react": "17.x",
