@@ -1,8 +1,8 @@
 import { Category } from 'data/types'
 
 /**
- * Check the slug and identify which data should output.
- * It could be all, standard category or location.
+ * It gets all categories not assigned as locations or brands and saves
+ * as subcategory of All.
  */
 const generateAllData = (categories: Category[]): Category => {
   return {

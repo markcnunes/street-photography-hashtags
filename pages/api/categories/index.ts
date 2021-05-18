@@ -1,6 +1,6 @@
-import categories from 'data/categories'
+import mainCategories from 'data'
 
 export default (req, res): void => {
   res.statusCode = 200
-  res.json(categories)
+  res.json(mainCategories)
 }
