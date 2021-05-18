@@ -3,8 +3,7 @@ import styled from '@emotion/styled'
 import LinkCTA from 'components/LinkCTA'
 import { GetStaticProps } from 'next'
 import generateAllData from 'helpers/generateAllData'
-import categories from 'data/categories'
-import locations from 'data/locations'
+import mainCategories, { brands, locations } from 'data'
 
 const StyledHome = styled('div')(props => ({
   display: 'flex',
@@ -48,7 +47,7 @@ const StyledSubheader = styled('div')({
   }
 })
 
-const StyledLocations = styled('div')({
+const StyledCategoryWithoutIcons = styled('div')({
   display: 'flex',
   flexWrap: 'wrap',
   width: '100%',
@@ -68,8 +67,10 @@ const StyledLocations = styled('div')({
   }
 })
 
-export default function Home({ categories, locations }) {
-  const { category: allCategory, icon: allIcon } = generateAllData(categories)
+export default function Home({ mainCategories, brands, locations }) {
+  const { category: allCategory, icon: allIcon } = generateAllData(
+    mainCategories
+  )
   return (
     <>
       <Head>
@@ -89,7 +90,7 @@ export default function Home({ categories, locations }) {
         <main>
           <div>
             <LinkCTA category={allCategory} icon={allIcon} key={allCategory} />
-            {categories.map(item => (
+            {mainCategories.map(item => (
               <LinkCTA
                 category={item.category}
                 icon={item.icon}
@@ -97,14 +98,22 @@ export default function Home({ categories, locations }) {
               />
             ))}
           </div>
-          <StyledLocations>
+          <StyledCategoryWithoutIcons>
+            <h3>Brands</h3>
+            <div>
+              {brands.map(item => (
+                <LinkCTA category={item.category} key={item.category} />
+              ))}
+            </div>
+          </StyledCategoryWithoutIcons>
+          <StyledCategoryWithoutIcons>
             <h3>Locations</h3>
             <div>
               {locations.map(item => (
                 <LinkCTA category={item.category} key={item.category} />
               ))}
             </div>
-          </StyledLocations>
+          </StyledCategoryWithoutIcons>
         </main>
       </StyledHome>
     </>
@@ -115,7 +124,8 @@ export const getStaticProps: GetStaticProps = async () => {
   // Pass post data to the page via props
   return {
     props: {
-      categories,
+      mainCategories,
+      brands,
       locations
     }
   }

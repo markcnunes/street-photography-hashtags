@@ -1,6 +1,6 @@
-import { Location } from './types'
+import { CategoryWithoutIcon } from './types'
 
-const locations: Location[] = [
+const locations: CategoryWithoutIcon[] = [
   {
     category: 'europe',
     keywords: ['#streetsineurope']
@@ -9,11 +9,12 @@ const locations: Location[] = [
     category: 'london',
     keywords: [
       '#explorelondon',
+      '#londonphotographer',
+      '#londonphotographer',
       '#londonstreet',
       '#londonstreetlife',
-      '#londonstreets',
-      '#londonphotographer',
-      '#londonstreetphotography'
+      '#londonstreetphotography',
+      '#londonstreets'
     ]
   }
 ]

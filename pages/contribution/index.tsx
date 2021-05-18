@@ -2,7 +2,7 @@ import VerifyKeyword from 'components/VerifyKeyword'
 import LayoutDefault from 'components/LayoutDefault'
 import styled from '@emotion/styled'
 import { GetStaticProps } from 'next'
-import categories from 'data/categories'
+import mainCategories from 'data'
 
 const StyledDescription = styled('div')({
   '& > div:last-of-type': {
@@ -10,7 +10,7 @@ const StyledDescription = styled('div')({
   }
 })
 
-export default function Contribution({ categories: allCategories }) {
+export default function Contribution({ mainCategories }) {
   return (
     <LayoutDefault title="Suggesting new keywords">
       <StyledDescription>
@@ -70,7 +70,7 @@ export default function Contribution({ categories: allCategories }) {
         </p>
         <p>Thanks for helping! 😎</p>
         <h3>Verify if keyword exist</h3>
-        <VerifyKeyword keywords={allCategories} />
+        <VerifyKeyword keywords={mainCategories} />
       </StyledDescription>
     </LayoutDefault>
   )
@@ -80,7 +80,7 @@ export const getStaticProps: GetStaticProps = async () => {
   // Pass post data to the page via props
   return {
     props: {
-      categories
+      mainCategories
     }
   }
 }

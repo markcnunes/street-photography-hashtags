@@ -12,8 +12,9 @@ export type CategoryIcon =
   | 'GiModernCity'
   | 'GiNewspaper'
   | 'GiPalette'
-  | 'GiSuspicious'
+  | 'GiPhotoCamera'
   | 'GiSpy'
+  | 'GiSuspicious'
   | 'GiTrophy'
 
 interface CategoryCore {
@@ -38,4 +39,4 @@ export interface Category extends CategoryCore {
   subcategories?: CategoryCore[]
 }
 
-export type Location = Omit<CategoryCore, 'icon'>
+export type CategoryWithoutIcon = Omit<CategoryCore, 'icon'>
