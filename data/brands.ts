@@ -7,13 +7,14 @@ const brands: CategoryWithoutIcon[] = [
       '#fujifeed',
       '#fujifilm_global',
       '#fujifilm_street',
-      '#fujifilm_Xseries',
+      '#fujifilm_xseries',
       '#fujifilm',
       '#fujifilmphotography',
       '#fujifilmxphotographer',
       '#fujilove',
       '#myfujifilm',
-      '#myfujilove'
+      '#myfujilove',
+      '#repostmyfujifilm'
     ]
   },
   {

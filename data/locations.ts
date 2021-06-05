@@ -9,7 +9,7 @@ const locations: CategoryWithoutIcon[] = [
     category: 'london',
     keywords: [
       '#explorelondon',
-      '#londonphotographer',
+      '#ig_londonphotographers',
       '#londonphotographer',
       '#londonstreet',
       '#londonstreetlife',

@@ -5,5 +5,6 @@ module.exports = {
     // add the directory with the setupTests.tsx file, for example:
     'test', // a utility folder
     __dirname // the root directory
-  ]
+  ],
+  setupFilesAfterEnv: ['./jest.setup.ts']
 }
