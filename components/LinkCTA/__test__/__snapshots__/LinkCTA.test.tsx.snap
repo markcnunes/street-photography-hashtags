@@ -99,6 +99,7 @@ exports[`<LinkCTA /> matchs snapshot 1`] = `
 
 <a
     class="emotion-0 emotion-1"
+    href="/Candid"
     title="View Candid"
   >
     <svg

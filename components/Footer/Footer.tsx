@@ -73,7 +73,7 @@ const Footer: React.FC = () => {
         <Link href={`/privacy`}>Privacy</Link>
         <Link href={`/terms`}>Terms of use</Link>
       </StyledLinks>
-      <Link href="/contribution">
+      <Link href="/contribution" passHref>
         <StyleCta>Contributions are welcomed!</StyleCta>
       </Link>
     </StyledFooter>
