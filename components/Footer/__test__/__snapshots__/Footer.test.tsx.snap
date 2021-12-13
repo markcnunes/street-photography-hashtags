@@ -130,6 +130,7 @@ exports[`<Footer /> matches snapshot 1`] = `
     </div>
     <a
       class="emotion-6 emotion-7"
+      href="/contribution"
     >
       Contributions are welcomed!
     </a>

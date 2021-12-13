@@ -14,7 +14,8 @@
     "skipLibCheck": true,
     "sourceMap": true,
     "strict": false,
-    "target": "es5"
+    "target": "es5",
+    "incremental": true
   },
   "include": ["**/*.ts", "**/*.tsx"],
   "exclude": [".next", "out", ".yarn", "ts-out", "node_modules"]
