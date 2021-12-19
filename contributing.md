@@ -73,6 +73,8 @@ It usually will take me within 24-48 hours to respond to any issue or request. H
 4. Check for existing [issues](https://github.com/markcnunes/street-photography-hashtags/issues) first, before filing an issue.
 5. Have fun!
 
+### Production
+
 The `development` branch will be merged into `production` once it is ready for production.
 
 ---
