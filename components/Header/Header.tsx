@@ -1,4 +1,5 @@
 import styled from '@emotion/styled'
+import Image from 'next/image'
 import Link from 'next/link'
 import Navbar from 'components/NavBar'
 import Button from 'components/Button'
@@ -15,9 +16,7 @@ const StyledHeader = styled('header')(props => ({
     display: 'flex',
     alignItems: 'center',
     marginRight: 10,
-    img: {
-      width: 100
-    }
+    width: 100
   },
   '.github': {
     marginRight: 5,
@@ -41,7 +40,7 @@ const Header: React.FC = () => {
     <StyledHeader>
       <Link href="/">
         <a className="logo" title="home">
-          <img src={'./logo-white.svg'} alt="Logo" width="371" height="144" />
+          <Image src={'/logo-white.svg'} alt="Logo" width="371" height="144" />
         </a>
       </Link>
 

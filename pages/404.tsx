@@ -1,4 +1,5 @@
 import React from 'react'
+import Image from 'next/image'
 import Link from 'next/link'
 import styled from '@emotion/styled'
 import LayoutDefault from 'components/LayoutDefault'
@@ -22,9 +23,10 @@ export default function Custom404() {
   return (
     <LayoutDefault title="Whoops!">
       <StyledContent>
-        <img
+        <Image
           src="https://media1.tenor.com/images/635b444fc50817834006ea00d90653b0/tenor.gif?itemid=15276381"
           alt="there is no place like home"
+          layout="fill"
         />
         <p>Sorry, something went wrong.</p>
         <p>Not to worry. You can head over to the homepage.</p>

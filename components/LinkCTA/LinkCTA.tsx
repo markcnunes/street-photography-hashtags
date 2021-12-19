@@ -21,7 +21,7 @@ interface LinkCTAProps {
 
 const LinkCTA = ({ icon, category, ...other }: LinkCTAProps) => {
   return (
-    <Link href={`/${category}`}>
+    <Link href={`/${category}`} passHref>
       <StyledLinkCTA {...other} title={`View ${category}`}>
         {icon && <CategoryIcon variant={icon} />}
         <h3>{category}</h3>
