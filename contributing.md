@@ -69,13 +69,9 @@ It usually will take me within 24-48 hours to respond to any issue or request. H
 
 1. If its a feature, bugfix, or anything please only change code to what you specify.
 2. Please keep PR titles easy to read and descriptive of changes, this will make them easier to merge :)
-3. Pull requests _must_ be made against `development` branch. Any other branch (unless specified by the maintainers) will get rejected.
+3. Pull requests _must_ be made against `main` branch. Any other branch (unless specified by the maintainers) will get rejected.
 4. Check for existing [issues](https://github.com/markcnunes/street-photography-hashtags/issues) first, before filing an issue.
 5. Have fun!
-
-### Production
-
-The `development` branch will be merged into `production` once it is ready for production.
 
 ---
 
