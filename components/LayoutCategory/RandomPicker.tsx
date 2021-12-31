@@ -112,7 +112,7 @@ const RandomPicker: React.FC<RandomPickerProps> = ({ keywords }) => {
     setRandomPickedKeywords(result)
   }
 
-  const [selectedOption, setSelectedOption] = useState(options[19].value)
+  const [selectedOption, setSelectedOption] = useState(options[2].value)
   return (
     <StyledRandomPicker>
       <h4>Random selection of keywords</h4>

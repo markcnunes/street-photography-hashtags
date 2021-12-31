@@ -6,21 +6,17 @@ import 'react-toastify/dist/ReactToastify.css'
 import Header from 'components/Header'
 import Footer from 'components/Footer'
 import Share from 'components/Share'
-import CookieBanner from 'components/CookieBanner/CookieBanner'
 
 function MyApp({ Component, pageProps }) {
   return (
-    <>
+    <ThemeProvider theme={theme}>
       <GlobalStyles />
-      <ThemeProvider theme={theme}>
-        <Header />
-        <Component {...pageProps} />
-        <Share />
-        <Footer />
-        <CookieBanner />
-        <ToastContainer />
-      </ThemeProvider>
-    </>
+      <Header />
+      <Component {...pageProps} />
+      <Share />
+      <Footer />
+      <ToastContainer />
+    </ThemeProvider>
   )
 }
 

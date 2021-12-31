@@ -2976,11 +2976,6 @@ functional-red-black-tree@^1.0.1:
   resolved "https://registry.yarnpkg.com/functional-red-black-tree/-/functional-red-black-tree-1.0.1.tgz#1b0ab3bd553b2a0d6399d29c0e3ea0b252078327"
   integrity sha1-GwqzvVU7Kg1jmdKcDj6gslIHgyc=
 
-ga-4-react@^0.1.26:
-  version "0.1.281"
-  resolved "https://registry.yarnpkg.com/ga-4-react/-/ga-4-react-0.1.281.tgz#aaacb5f42b7b302a39fa5c63c39103407655e9ac"
-  integrity sha512-LBvn8digT3gS8Iw8/XN3Z60c/JlFjMreLrZEneeQr+N/3+Ymv8yOsuK6qFAX2VPS6TscLbSlgtb/mriJ2P17Ow==
-
 gensync@^1.0.0-beta.2:
   version "1.0.0-beta.2"
   resolved "https://registry.yarnpkg.com/gensync/-/gensync-1.0.0-beta.2.tgz#32a6ee76c3d7f52d46b2b1ae5d93fea8580a25e0"
@@ -4119,11 +4114,6 @@ jest@^26.6.3:
     import-local "^3.0.2"
     jest-cli "^26.6.3"
 
-js-cookie@^2.2.1:
-  version "2.2.1"
-  resolved "https://registry.yarnpkg.com/js-cookie/-/js-cookie-2.2.1.tgz#69e106dc5d5806894562902aa5baec3744e9b2b8"
-  integrity sha512-HvdH2LzI/EAZcUwA8+0nKNtWHqS+ZmijLA30RwZA0bo7ToCckjK5MkGhjED9KoRcXO6BaGI3I9UIzSA1FKFPOQ==
-
 "js-tokens@^3.0.0 || ^4.0.0", js-tokens@^4.0.0:
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/js-tokens/-/js-tokens-4.0.0.tgz#19203fb59991df98e3a287050d4647cdeaf32499"
@@ -5162,14 +5152,6 @@ raw-body@2.4.1:
     http-errors "1.7.3"
     iconv-lite "0.4.24"
     unpipe "1.0.0"
-
-react-cookie-consent@^7.0.1:
-  version "7.0.1"
-  resolved "https://registry.yarnpkg.com/react-cookie-consent/-/react-cookie-consent-7.0.1.tgz#608162807c79ef28ac1ce351dc5878d3e6746edd"
-  integrity sha512-oCLoqfu9c3l0bQTe5+aLLBPfEjtbyyxh2BidN8VyE7tFkhbBK4A3ZB3TRIUKpVSJJgh8dULbbEN2tjRfcX8Pgg==
-  dependencies:
-    js-cookie "^2.2.1"
-    prop-types "^15.7.2"
 
 react-dom@17.x:
   version "17.0.2"

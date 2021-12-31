@@ -7,11 +7,10 @@ function GlobalStyles() {
   return (
     <Global
       styles={css`
-        @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Work+Sans:wght@600&display=swap');
-        ${normalize()},
+        ${normalize()};
         *,
-          *::before,
-          *::after {
+        *::before,
+        *::after {
           box-sizing: inherit;
         }
         html,
